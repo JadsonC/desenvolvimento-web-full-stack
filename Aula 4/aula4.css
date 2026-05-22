@@ -1,0 +1,37 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+body {
+    background-color: burlywood;
+}
+
+p {
+    /* font-size: 20px; */
+    font-family: Arial;
+    text-align: center;
+}
+
+div {
+    border: 2px solid black;
+}
+
+table, tr, th, td {
+    border: 2px solid black;
+}
+
+.classButton {
+    padding: 10px;
+    margin: 20px;
+    background-color: aqua;
+    color: red;
+}
+
+#div-titulo {
+    font-size: 50px;
+}
+
+#div-paragrafo {
+    color: red;
+}

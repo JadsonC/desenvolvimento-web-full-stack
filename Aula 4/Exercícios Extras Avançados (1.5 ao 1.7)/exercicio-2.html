@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+    
+    <!-- CSS (VISUAL) -->
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML (ESTRUTURA) -->
+    <h1>Meu Site</h1>
+    <p>Este é um parágrafo de exemplo.</p>
+    <button onclick="alternarTema()">Alternar tema</button>
+
+    <!-- JAVASCRIPT (LÓGICA) -->
+    <script>
+        function alternarTema() {
+            const corpo = document.body;
+            
+            if (corpo.style.backgroundColor === 'black') {
+                corpo.style.backgroundColor = 'white';
+                corpo.style.color = 'black';
+            } else {
+                corpo.style.backgroundColor = 'black';
+                corpo.style.color = 'white';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 3</title>
+    
+    <!-- CSS (VISUAL) -->
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+        }
+        #numero {
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML (ESTRUTURA) -->
+    <h1 id="numero">0</h1>
+    <button onclick="mudar(1)">+</button>
+    <button onclick="mudar(-1)">-</button>
+    <button onclick="resetar()">Resetar</button>
+
+    <!-- JAVASCRIPT (LÓGICA) -->
+    <script>
+        let contador = 0;
+        const elementoNumero = document.getElementById('numero');
+
+        function mudar(valor) {
+            contador += valor;
+            elementoNumero.innerHTML = contador;
+            
+            if (contador > 0) {
+                elementoNumero.style.color = 'green';
+            } else if (contador < 0) {
+                elementoNumero.style.color = 'red';
+            } else {
+                elementoNumero.style.color = 'black';
+            }
+        }
+
+        function resetar() {
+            contador = 0;
+            elementoNumero.innerHTML = contador;
+            elementoNumero.style.color = 'black';
+        }
+    </script>
+
+</body>
+</html>

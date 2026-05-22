@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+    
+    <!-- CSS (VISUAL) -->
+    <style>
+        body {
+            padding: 30px;
+        }
+        ul {
+            margin-top: 15px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML (ESTRUTURA) -->
+    <input type="text" id="novaTarefa" placeholder="Digite a tarefa">
+    <button onclick="adicionar()">Adicionar</button>
+    <ul id="lista"></ul>
+
+    <!-- JAVASCRIPT (LÓGICA) -->
+    <script>
+        function adicionar() {
+            const input = document.getElementById('novaTarefa');
+            const lista = document.getElementById('lista');
+            
+            if (input.value === '') return;
+            
+            const item = document.createElement('li');
+            item.innerHTML = input.value + ' <button onclick="this.parentElement.remove()">Remover</button>';
+            
+            lista.append(item);
+            input.value = '';
+        }
+    </script>
+
+</body>
+</html>

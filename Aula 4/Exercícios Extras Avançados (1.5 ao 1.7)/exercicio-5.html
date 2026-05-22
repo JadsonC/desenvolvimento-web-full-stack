@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5</title>
+
+    <!-- CSS (VISUAL) -->
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        input {
+            width: 80px;
+            text-align: center;
+        }
+
+        .erro {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML (ESTRUTURA) -->
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <br><br>
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+
+    <h3 id="resultado">Resultado: </h3>
+
+    <!-- JAVASCRIPT (LÓGICA) -->
+    <script>
+        function calcular(operacao) {
+            const n1 = Number(document.getElementById('num1').value);
+            const n2 = Number(document.getElementById('num2').value);
+            const resultado = document.getElementById('resultado');
+
+            // Remove a classe de erro caso existisse antes
+            resultado.classList.remove('erro');
+
+            if (operacao === '/' && n2 === 0) {
+                resultado.innerHTML = "Erro: Não dá para dividir por zero!";
+                resultado.classList.add('erro');
+                return;
+            }
+
+            let total = 0;
+            if (operacao === '+') total = n1 + n2;
+            if (operacao === '-') total = n1 - n2;
+            if (operacao === '*') total = n1 * n2;
+            if (operacao === '/') total = n1 / n2;
+
+            resultado.innerHTML = "Resultado: " + total;
+        }
+    </script>
+
+</body>
+
+</html>

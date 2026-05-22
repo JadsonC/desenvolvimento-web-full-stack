@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 6</title>
+    
+    <!-- CSS (VISUAL) -->
+    <style>
+        body {
+            text-align: center;
+            padding-top: 30px;
+        }
+        .moldura {
+            width: 300px;
+            margin: auto;
+        }
+        #imagemPrincipal {
+            width: 100%;
+            height: 200px;
+        }
+        #legenda {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML (ESTRUTURA) -->
+    <div class="moldura">
+        <img id="imagemPrincipal" src="https://picsum.photos/id/10/300/200">
+        <p id="legenda">Imagem 1</p>
+        <button onclick="mudarImagem(-1)">Anterior</button>
+        <button onclick="mudarImagem(1)">Próxima</button>
+    </div>
+
+    <!-- JAVASCRIPT (LÓGICA) -->
+    <script>
+        const fotos = [
+            "https://picsum.photos/id/10/300/200",
+            "https://picsum.photos/id/16/300/200",
+            "https://picsum.photos/id/28/300/200",
+            "https://picsum.photos/id/43/300/200"
+        ];
+        let indice = 0;
+
+        function mudarImagem(direcao) {
+            indice += direcao;
+            
+            if (indice < 0) indice = fotos.length - 1;
+            if (indice >= fotos.length) indice = 0;
+
+            document.getElementById('imagemPrincipal').src = fotos[indice];
+            document.getElementById('legenda').innerHTML = "Imagem " + (indice + 1);
+        }
+    </script>
+
+</body>
+</html>

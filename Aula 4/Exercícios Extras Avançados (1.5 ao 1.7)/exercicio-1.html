@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 1 - Perfil do Jadson</title>
+    
+    <!-- CSS (VISUAL) -->
+    <style>
+        .card {
+            border: 1px solid black;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            margin: 20px auto;
+        }
+        .avatar {
+            border-radius: 50%;
+        }
+        .escondido {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HTML (ESTRUTURA) -->
+    <div class="card">
+        <img src="https://picsum.photos/100" class="avatar">
+        <h3>Jadson Santos</h3>
+        <p>Desenvolvedor Web</p>
+        
+        <p id="textoEscondido" class="escondido">Sou desenvolvedor e instrutor</p>
+        <button id="btnMostrar" onclick="mostrarMais()">Mostrar mais</button>
+    </div>
+
+    <!-- JAVASCRIPT (LÓGICA) -->
+    <script>
+        function mostrarMais() {
+            const texto = document.getElementById('textoEscondido');
+            const botao = document.getElementById('btnMostrar');
+
+            if (texto.style.display === 'none' || texto.style.display === '') {
+                texto.style.display = 'block';
+                botao.textContent = 'Mostrar menos';
+            } else {
+                texto.style.display = 'none';
+                botao.textContent = 'Mostrar mais';
+            }
+        }
+    </script>
+
+</body>
+</html>
