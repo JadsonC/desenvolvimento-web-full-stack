@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bootstrap e Tailwind CSS</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- BOOTSTRAP -->
+    <!-- ========================================= -->
+
+    <main>
+
+        <section style="margin-bottom: 120px;">
+
+            <header style="margin-bottom: 20px;">
+                <h1>Bootstrap</h1>
+            </header>
+
+            <!-- Botões -->
+            <section>
+
+                <h2>Botões Bootstrap</h2>
+
+                <button class="btn btn-primary">
+                    Clique Aqui
+                </button>
+
+                <button class="btn btn-success">
+                    Salvar
+                </button>
+
+            </section>
+
+            <br>
+
+            <!-- Alerta -->
+            <section>
+
+                <h2>Alerta Bootstrap</h2>
+
+                <div class="alert alert-danger">
+                    A operação falhou!
+                </div>
+
+            </section>
+
+            <!-- Grid -->
+            <section>
+
+                <h2>Sistema de Grid</h2>
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-4 border border-3 border-dark">
+                            Coluna 1
+                        </div>
+
+                        <div class="col-4 border border-3 border-dark">
+                            Coluna 2
+                        </div>
+
+                        <div class="col-4 border border-3 border-dark">
+                            Coluna 3
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <br>
+
+            <!-- Responsividade -->
+            <section>
+
+                <h2>Grid Responsivo</h2>
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-12 col-md-6 border border-3 border-danger">
+                            Ocupa a tela toda no celular e metade no computador
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- ========================================= -->
+        <!-- TAILWIND CSS -->
+        <!-- ========================================= -->
+
+        <section>
+
+            <header style="margin-bottom: 20px;">
+                <h1>Tailwind CSS</h1>
+            </header>
+
+            <!-- Botão -->
+            <section>
+
+                <h2>Botão Tailwind</h2>
+
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Clique Aqui
+                </button>
+
+            </section>
+
+            <br>
+
+            <!-- Responsividade -->
+            <section>
+
+                <h2>Responsividade no Tailwind</h2>
+
+                <div class="bg-red-500 md:bg-green-500">
+                    Fundo vermelho no celular, mas verde no computador.
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

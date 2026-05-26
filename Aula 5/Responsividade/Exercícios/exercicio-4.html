@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        header,
+        nav,
+        footer {
+            border: 2px solid black;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .elemento {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        @media (max-width: 691px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Meu Site</h1>
+    </header>
+
+    <nav>
+
+        <a href="#">Início</a>
+
+        <a href="#">Cursos</a>
+
+        <a href="#">Contato</a>
+
+    </nav>
+
+    <main class="container">
+
+        <article class="elemento">
+            Elemento 1
+        </article>
+
+        <article class="elemento">
+            Elemento 2
+        </article>
+
+        <article class="elemento">
+            Elemento 3
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Rodapé</p>
+    </footer>
+
+</body>
+</html>
