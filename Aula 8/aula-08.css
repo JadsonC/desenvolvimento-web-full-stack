@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.card {
+    padding: 15px;
+    background: #f4f4f4;
+    margin-top: 10px;
+}
+
+.ativo {
+    background: #ccc;
+    color: white;
+}
+
+ul {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#menu {
+    display: none; /* torna o elemento visível */
+    margin-top: 10px;
+}
+
+#menu.ativo {
+    display: block; display: block; /* torna o elemento visível */
+}
+
+#pai {
+    padding: 20px;
+    background: #ddd;
+}
