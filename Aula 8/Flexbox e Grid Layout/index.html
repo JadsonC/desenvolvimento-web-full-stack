@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .galeria {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px
+        }
+
+    </style>
+</head>
+<body>
+    <!-- FLEXBOX -->
+    <header class="menu">
+        <h1>Logo</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Produtos</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <!-- GRID LAYOUT -->
+    <section class="galeria">
+        <div>
+            <img src="https://picsum.photos/id/10/210" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/20/210" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/30/210" alt="">
+        </div>
+        <div>
+            <img src="https://picsum.photos/id/40/210" alt="">
+        </div>
+    </section>
+
+</body>
+</html>

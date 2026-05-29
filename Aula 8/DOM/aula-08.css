@@ -30,12 +30,12 @@ button {
 }
 
 #menu {
-    display: none; /* torna o elemento visível */
+    display: none; /* torna o elemento invisível */
     margin-top: 10px;
 }
 
 #menu.ativo {
-    display: block; display: block; /* torna o elemento visível */
+    display: block; /* torna o elemento visível */
 }
 
 #pai {
