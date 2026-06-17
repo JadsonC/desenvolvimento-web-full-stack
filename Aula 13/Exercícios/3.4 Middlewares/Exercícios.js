@@ -1,75 +1,4 @@
-import express from 'express'
-import { validarUsuario } from './middlewares/validarUsuario.js';
-import { errorHandler } from './middlewares/errorHandler.js';
-import morgan from 'morgan'
-
-const app = express();
-
-app.use(express.json())
-
-app.use(morgan('dev'))
-
-app.post('/usuarios', validarUsuario, (req, res) => {
-    res.status(201).json({
-        mensagem : 'Usuário criado!'
-    })
-})
-
-// app.put('/usuarios/:id', validarUsuario));
-
-app.use(errorHandler);
-
-
-// Logs com morgan
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ATENÇÃO: as rotas que respondem os exercícios devem ficar no app.js para serem testados
 
 //3.4 Exercício 1
 
@@ -182,12 +111,12 @@ app.use(errorHandler);
 //     next();
 // })
 
-app.get('/usuarios', (req, res) => {
-    res.json([
-        { id: 1, nome: 'Jadson' },
-        { id: 2, nome: 'César' },
-    ])
-})
+// app.get('/usuarios', (req, res) => {
+//     res.json([
+//         { id: 1, nome: 'Jadson' },
+//         { id: 2, nome: 'César' },
+//     ])
+// })
 
 // app.post('/usuarios', (req, res, next) => {
 //     if (!req.body.nome) {
@@ -202,5 +131,3 @@ app.get('/usuarios', (req, res) => {
 //         res.status(201).json({ mensagem: 'Usuário criado!' })
 //     }
 // )
-
-export default app; // exporta o app para que o server.js possa importá-lo
